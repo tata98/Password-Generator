@@ -10,11 +10,27 @@ $(function () {
     $(".maxVal").text($("#customRange1").attr("max"))
 
     let length = $("#customRange1").val(); //custom value of the length of the password 
+/**
+ * function sets the message about strength(weak, avarage or strong)
+ * based on the length of the password
+ */
+    function displayStrength(length) { 
+        if (length < 9) {
+            $(".strength").text("Weak");
+        } else if (length >= 9 && length < 15) {
+            $(".strength").text("Avarage");
+        } else {
+            $(".strength").text("Strong");
+        }
+     }
 
     $(".output").text("password length is: " + length);
+    displayStrength(length);
+
     $("#customRange1").on("input", function () {
         length = $(this).val(); //changes length values dynamically from range slider
         $(".output").text("password length is: " + length);
+        displayStrength(length);
     });
 
     /**
