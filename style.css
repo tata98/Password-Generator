@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+.generator-wrapper{
+    font-family: 'Roboto', sans-serif;
+    background-color: #0b2f63;
+}
+.form-check-style{
+    background-color: #2d5690d6;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.form-check-input:focus, .generate:focus {
+    box-shadow: none;
+}
+.bi-clipboard:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.rang{
+    -webkit-appearance: none;
+	border-radius: 5px;
+	background-color: #2d5690d6;
+    height: 5px;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+.rang::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+	-webkit-appearance: none;
+	border-radius: 50%;
+	background-color: #2d5690;
+	cursor: pointer;
+ }
+ .rang::-webkit-slider-thumb:hover{
+    transform: scale(1.2);
+ }
+
+.form-check-style .form-check-input:checked {
+    background-color: #0b2f63;
+    border-color: #0b2f63;
+}
+.copy-to-clipboard, .generate{
+    background-color: #2d5690d6;
+    border-color: #2d5690d6 ;
+}
+.copy-to-clipboard input {
+    border: none;
+	background: transparent;
+    outline: none;
+}
+.copied {
+	font-weight: bold;
+	z-index: 99;
+	top: 0;
+    left: 0;
+    padding: 7px;
+	font-size: 20px;
+   
+}

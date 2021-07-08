@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="col-md-4 col-sm-10 generator-wrapper shadow text-center position-relative mx-auto p-4 text-white rounded mt-3">
+        <div class="copied position-absolute text-white w-100 text-center"></div>
+
+        <h3>Password Generator</h3>
+
+        <div class="mx-auto">
+            <div class="copy-to-clipboard m-3 d-flex mx-auto align-items-center rounded px-md-2">
+                <input class="generated-password w-100 p-3 text-white text-center" readonly type="text">
+                <i class="bi bi-clipboard fs-4 text-white"></i>
+            </div>
+            <label for="customRange1" class="form-label output d-block text-center "></label>
+            <div class="d-flex align-items-center ">
+                <span class="minVal"></span>
+                <input type="range" class="rang w-100 mx-2 " min="6" max="20" id="customRange1">
+                <span class="maxVal"></span>
+            </div>
+            <p class="text-start mt-2 d-flex align-items-center "><i class="bi bi-shield-check fs-4 me-1"></i> <span class="strength"></span></p>
+            <div class="form-check form-check-style form-switch">
+                <input class="form-check-input" type="checkbox" checked="checked" id="uppercase">
+                <label class="form-check-label" for="uppercase">Include Uppercase</label>
+            </div>
+            <div class="form-check form-check-style form-switch">
+                <input class="form-check-input" type="checkbox" id="lowercase">
+                <label class="form-check-label" for="lowercase"> Include lowercase</label>
+            </div>
+            <div class="form-check form-check-style form-switch">
+                <input class="form-check-input" type="checkbox" checked="checked" id="numbers">
+                <label class="form-check-label" for="numbers">Include Numbers</label>
+            </div>
+            <div class="form-check form-check-style form-switch">
+                <input class="form-check-input" type="checkbox" id="symbols">
+                <label class="form-check-label" for="symbols">Include Symbols</label>
+            </div>
+            <button class="btn generate text-white w-100 mt-3">Generate Password</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
