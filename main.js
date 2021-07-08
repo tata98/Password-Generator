@@ -54,4 +54,18 @@ $(function () {
         $(".generated-password").val(generatePassword(length, $("#uppercase").is(":checked"), $("#lowercase").is(":checked"), $("#numbers").is(":checked"), $("#symbols").is(":checked")));
     });
 
+
+    /**
+     * this click event is responsible for copying genereated password 
+     */
+    $(".bi-clipboard").click(function () {
+        if ($(".generated-password").val() != "") {
+            $(".generated-password").select();
+            document.execCommand('copy');
+            $(".copied").text("Copied to clipboard!").addClass("success").removeClass("fail").show().fadeOut(1500);
+        } else {
+            $(".copied").text("password was not generated!").addClass("fail").removeClass("success").show().fadeOut(1500);
+        }
+    });
+
 });
